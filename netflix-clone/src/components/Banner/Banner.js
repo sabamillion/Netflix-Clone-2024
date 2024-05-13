@@ -19,7 +19,7 @@ const Banner = () => {
     }, []);   
 
     function truncate(str, n) {
-        return str?.length > n ? str.subtr(0, n - 1) + '...' : str;
+        return str?.length > n ? str.substr(0, n - 1) + '...' : str;
     }
     return (
         <div
@@ -40,7 +40,7 @@ const Banner = () => {
                     <button className='banner_button'>My List</button>
                 </div>
                 <h1 className='banner_description'>{truncate(movie?.overview, 150)}</h1>
-            </div>
+                </div>
             <div className='banner_fadeBottom'></div>
         </div>
     )
